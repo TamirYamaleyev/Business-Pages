@@ -1,0 +1,63 @@
+$medium: 1113px;
+
+body a {
+    text-decoration: none;
+}
+
+.AppBar {
+    a {
+        color: #fff;
+
+        @media screen and (max-width: $medium) {
+            h4 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    max-height: 64px;
+}
+
+.AppBarSandbox {
+    a {
+        color: #000;
+    }
+
+    background-color: #deedf8f5 !important;
+}
+
+.AppBarSandboxDark {
+    a {
+        color: #fff;
+    }
+
+    background-color: #333333ee !important;
+}
+
+.AppBarSandbox,
+.AppBarSandboxDark {
+    margin-top: 64px;
+
+    .active {
+        color: #fff;
+    }
+}
+
+.MuiMenu a>li {
+    color: #000;
+    opacity: 0.87;
+}
+
+.MuiMenuDark a>li {
+    color: #fff;
+}
+
+.BusinessDetailsBox {
+    width: 100%;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+}
+
+.BackButton {
+    bottom: 50%;
+}
