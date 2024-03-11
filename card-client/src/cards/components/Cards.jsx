@@ -15,21 +15,19 @@ import Zoom from '@mui/material/Zoom';
 
 export default function Cards({ cards, handleDelete, handleUpdateFavsPage }) {
 
-  const { id } = useParams();
   const navigate = useNavigate();
   const { user } = useUser();
 
   const {
     handleLikeCard,
     handleCallCard,
-    value: { card },
   } = useCards();
 
   const handleLike = (id) => {
     handleLikeCard(id);
   };
   const handleCall = (id) => {
-    const card = cards.find((card) => card._id == id);
+    const card = cards.find((card) => card._id === id);
     handleCallCard(card);
   }
 
