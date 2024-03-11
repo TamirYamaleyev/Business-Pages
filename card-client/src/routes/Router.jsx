@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CardDetailsPage from "../cards/pages/CardDetailsPage";
 import CardPage from "../cards/pages/CardPage";
