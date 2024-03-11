@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import MyButton from "./MyButton";
 import AbcIcon from "@mui/icons-material/Abc";
@@ -38,20 +38,3 @@ export default function ShowData() {
     </div>
   );
 }
-
-//memo -
-//איתה אנחנו עוטפים קומפוננטה לפני הייצוא שלה
-// הפונקציה הזאת עוזרת לקומפוננטה לזכור את הערכים שהיא קיבלה
-//אם היא לא קיבלה שום ערך חדש אז היא לא מתרנדרת שוב
-//פונקציית ממו יודעת לזכור רק ערכים פרימיטיביים
-
-//useMemo
-//עוזרת לנו לשלוח בתור פרופס, ערך מורכב
-// אובייקט, מערך או פונקציה שמחזירה איזשהו משהו
-// ההוק הזה מקבל פונקציה שמחזירה ערך (מורכב או פשוט)
-//ומקבלת גם מערך של דפנדסיז
-
-//useCallback
-//עוזרת לנו לשלוח לתוך קומפוננטה
-//פונקציית קולבק שעומדת לרוץ בתוך הקומפוננטה
-//הוק זה גם מקבל פונקציה ומערך של דפנדסיז
