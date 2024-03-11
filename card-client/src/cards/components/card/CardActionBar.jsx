@@ -39,7 +39,7 @@ export default function CardActionBar({
     <React.Fragment>
       <CardActions sx={{justifyContent: "space-between"}}>
         <Box>
-          {user?.isAdmin || user?.id == user_id ? (
+          {user?.isAdmin || user?.id === user_id ? (
             <React.Fragment>
               <IconButton
                 aria-label="Delete Card"
