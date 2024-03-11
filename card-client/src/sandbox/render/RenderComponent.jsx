@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import MyButton from "./MyButton";
 
 export default function RenderComponent() {
@@ -6,13 +6,6 @@ export default function RenderComponent() {
 
   const [value, setValue] = useState(0);
   const [value2, setValue2] = useState(0);
-
-  //   useEffect(() => {
-  //     console.log("The effect is rendered");
-  //     return () => {
-  //       console.log("The components is unmount");
-  //     };
-  //   }, []);
 
   const doSomethingLong = useMemo(() => {
     console.log("The long function is render");
@@ -34,5 +27,3 @@ export default function RenderComponent() {
     </div>
   );
 }
-
-//הפסקה עד 19:50
