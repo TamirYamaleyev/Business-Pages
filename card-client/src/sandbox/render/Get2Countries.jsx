@@ -1,5 +1,5 @@
 import { Button, TextField } from "@mui/material";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import CountryDetails from "./CountryDetails";
 
 export default function Get2Countries() {
