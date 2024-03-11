@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import PageHeader from "../../components/PageHeader";
 import useCards from "../hooks/useCards";
 import CardsFeedback from "../components/CardsFeedback";
@@ -11,7 +11,7 @@ export default function CardPage() {
 
   useEffect(() => {
     handleGetCards();
-  }, []);
+  }, [handleGetCards]);
 
   const handleDelete = async (id) => {
     await handleDeleteCard(id);
@@ -19,7 +19,6 @@ export default function CardPage() {
   };
 
   const handleUpdateFavsPage = async () => {
-    //no need to do anything - only on favorites page
   };
 
   return (
