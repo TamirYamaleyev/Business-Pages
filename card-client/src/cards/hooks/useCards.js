@@ -108,13 +108,13 @@ export default function useCards() {
   }, []);
 
 
-  const addToLikes = ((card) => {
+  const addToLikes = useCallback((card) => {
     snack("success", "\"" + card.title + "\" has been added to your favorites");
-  })
+  }, [snack])
 
-  const removeFromLikes = ((card) => {
+  const removeFromLikes = useCallback((card) => {
     snack("success", "\"" + card.title + "\" has been removed from your favorites");
-  })
+  }, [snack])
 
   const handleLikeCard = useCallback(async (cardId) => {
     try {
