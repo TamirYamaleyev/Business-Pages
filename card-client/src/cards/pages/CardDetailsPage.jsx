@@ -16,7 +16,7 @@ import Zoom from '@mui/material/Zoom';
 const Iframe = ({ ...props }) => {
   return (
     <div>
-      <iframe src={props.src} height={props.height} width={props.width} style={props.style} loading="lazy" allowFullScreen />
+      <iframe src={props.src} height={props.height} width={props.width} style={props.style} loading="lazy" allowFullScreen title="title"/>
     </div>
   )
 }
@@ -29,7 +29,7 @@ export default function CardDetailsPage() {
 
   useEffect(() => {
     handleGetCard(id);
-  }, []);
+  }, [handleGetCard, id]);
 
   if (card) {
     return (
