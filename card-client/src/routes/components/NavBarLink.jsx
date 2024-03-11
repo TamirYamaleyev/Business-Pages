@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function NavBarLink({ to, children, sx }) {
 
   return (
-    <NavLink to={to} style={({ isActive }) => ({ backgroundColor: (isActive && to != "/") ? "#03a8f4d8" : "", ...sx })}>
+    <NavLink to={to} style={({ isActive }) => ({ backgroundColor: (isActive && to !== "/") ? "#03a8f4d8" : "", ...sx })}>
       {children}
     </NavLink>
   );
