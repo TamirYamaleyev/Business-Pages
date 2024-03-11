@@ -47,7 +47,7 @@ export default function useCards() {
       requestStatus(false, error, null);
       snack("error", "Failed to fetch cards");
     }
-  });
+  }, [snack]);
 
   const handleGetMyCards = useCallback(async () => {
     try {
@@ -81,7 +81,7 @@ export default function useCards() {
       requestStatus(false, error, null);
       snack("error", "Failed to create card");
     }
-  }, []);
+  }, [snack, navigate]);
 
   const handleUpdateCard = useCallback(async (cardId, cardFromClient) => {
     try {
@@ -94,7 +94,7 @@ export default function useCards() {
       requestStatus(false, error, null);
       snack("error", "Failed to update card");
     }
-  }, []);
+  }, [snack, navigate]);
 
   const handleDeleteCard = useCallback(async (cardId) => {
     try {
@@ -124,7 +124,7 @@ export default function useCards() {
     } catch (error) {
       requestStatus(false, error, null);
     }
-  }, []);
+  }, [addToLikes, cards, removeFromLikes, user]);
 
   const handleGetFavCards = useCallback(async (userID) => {
     try {
@@ -144,7 +144,7 @@ export default function useCards() {
     } catch (error) {
       snack("error", "Call failed " + error + card._id);
     }
-  }, []);
+  }, [snack]);
 
   const value = useMemo(() => {
     return { isLoading, cards, card, error };
