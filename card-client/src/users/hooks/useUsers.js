@@ -40,7 +40,7 @@ const useUsers = () => {
     } catch (error) {
       requestStatus(false, error, null);
     }
-  }, []);
+  }, [navigate, requestStatus, setToken]);
 
   const handleLogout = useCallback(() => {
     removeToken();
