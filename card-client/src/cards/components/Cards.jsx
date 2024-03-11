@@ -6,7 +6,7 @@ import CardBussinesComponent from "./card/CardBussinesComponent";
 import useCards from "../hooks/useCards";
 import { useUser } from "../../users/providers/UserProvider";
 import ROUTES from "../../routes/routesModel";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import Tooltip from '@mui/material/Tooltip';
