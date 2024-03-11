@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import useCards from '../hooks/useCards';
-import { useUser } from '../../users/providers/UserProvider';
 import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routes/routesModel';
 import { Container } from '@mui/material';
@@ -21,7 +20,7 @@ export default function FavCards({user}) {
     } else {
       handleGetFavCards(user.id);
     }
-  }, [user]);
+  }, [user, navigate, handleGetFavCards]);
 
   const handleDelete = async (id) => {
     await handleDeleteCard(id);
