@@ -1,6 +1,6 @@
 import { AppBar, Container, Toolbar } from "@mui/material";
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import {  Outlet } from "react-router-dom";
 import NavItem from "../routes/components/NavItem";
 import { styled } from '@mui/material/styles';
 import { useTheme } from "../providers/ThemeProvider";
