@@ -16,11 +16,10 @@ export default function EditCardPage() {
   const {
     handleUpdateCard,
     handleGetCard,
-    value: { card },
   } = useCards();
 
   const { user } = useUser();
-  const { value, ...rest } = useForm(initialCardForm, cardSchema, () => {
+  const { value, setData, ...rest } = useForm(initialCardForm, cardSchema, () => {
     handleUpdateCard(id, {
       ...normalizeCard({ ...value.data }),
       bizNumber: id.bizNumber,
@@ -30,9 +29,9 @@ export default function EditCardPage() {
   useEffect(() => {
     handleGetCard(id).then((data) => {
       const modelCard = mapCardToModel(data);
-      rest.setData(modelCard);
+      setData(modelCard);
     });
-  }, []);
+  }, [handleGetCard, id, setData]);
   if (!user) return <Navigate replace to={ROUTES.ROOT} />;
 
   return (
