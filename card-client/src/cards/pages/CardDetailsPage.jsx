@@ -105,7 +105,7 @@ export default function CardDetailsPage() {
                 >
                   <Iframe width="100%" height="600" style={{ border: 0 }}
                     src={`https://www.google.com/maps/embed/v1/place?q=${card.address.street} ${card.address.houseNumber}
-                     ${card.address.city} ${card.address.state} ${card.address.country}&key=AIzaSyBgnQ3zp8RTjNFDlf6zKkv5mmMVcJSPy2M} />
+                     ${card.address.city} ${card.address.state} ${card.address.country}&key=AIzaSyBgnQ3zp8RTjNFDlf6zKkv5mmMVcJSPy2M`} />
                 </Paper>
               </Grid>
             </Grid>
